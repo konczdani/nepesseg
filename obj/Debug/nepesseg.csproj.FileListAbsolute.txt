@@ -1,0 +1,8 @@
+D:\Git_dolgok\nepesseg\bin\Debug\adatok-utf8.txt
+D:\Git_dolgok\nepesseg\bin\Debug\nepesseg.exe.config
+D:\Git_dolgok\nepesseg\bin\Debug\nepesseg.exe
+D:\Git_dolgok\nepesseg\bin\Debug\nepesseg.pdb
+D:\Git_dolgok\nepesseg\obj\Debug\nepesseg.csproj.AssemblyReference.cache
+D:\Git_dolgok\nepesseg\obj\Debug\nepesseg.csproj.CoreCompileInputs.cache
+D:\Git_dolgok\nepesseg\obj\Debug\nepesseg.exe
+D:\Git_dolgok\nepesseg\obj\Debug\nepesseg.pdb
