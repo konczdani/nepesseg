@@ -51,6 +51,19 @@ namespace nepesseg
                 }
             }
             Console.WriteLine($"Kínában a lakosság {kinlak-indlak} fővel volt több.");
+            Console.WriteLine();
+            Console.WriteLine("6.feladat:");
+            int harmadik_lak = 0;
+            string harmadik_nev = "";
+            foreach(var item in neplist)
+            {
+                if(item.nepesseg<indlak&&item.nepesseg<kinlak&&item.nepesseg>harmadik_lak)
+                {
+                    harmadik_lak=item.nepesseg;
+                    harmadik_nev = item.orszag;
+                }
+            }
+            Console.WriteLine($"A harmadik legnépesebb ország: {harmadik_nev}, lakossága {harmadik_lak} fő.");
             Console.ReadLine();
         }
     }
