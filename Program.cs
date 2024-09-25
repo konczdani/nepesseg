@@ -35,6 +35,22 @@ namespace nepesseg
                     Console.WriteLine($"Kína népsűrűsége {item.nepesseg/item.terulet} fő/km^2.");
                 }
             }
+            Console.WriteLine();
+            Console.WriteLine("5.feladat:");
+            int indlak = 0;
+            int kinlak = 0;
+            foreach(var item in neplist)
+            {
+                if (item.orszag=="India")
+                {
+                    indlak = item.nepesseg;
+                }
+                if (item.orszag=="Kína")
+                {
+                    kinlak=item.nepesseg;
+                }
+            }
+            Console.WriteLine($"Kínában a lakosság {kinlak-indlak} fővel volt több.");
             Console.ReadLine();
         }
     }
