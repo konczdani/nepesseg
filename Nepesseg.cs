@@ -33,7 +33,24 @@ namespace nepesseg
                 this.fovaros = darab[3];
                 this.fo_nepesseg = int.Parse(darab[4]);
             }
-            
+
         }
+        public bool szazalek()
+        {
+            bool ok= false;
+            int vlak = fo_nepesseg;
+            int olak = nepesseg;
+            double szaz = (fo_nepesseg * 100) / nepesseg;
+            if (Math.Floor(szaz)>=30) 
+            {
+                ok=true;
+            }
+            else
+            {
+                ok=false;
+            }
+            return ok;
+        }
+
     }
 }

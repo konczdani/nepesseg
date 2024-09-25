@@ -19,7 +19,7 @@ namespace nepesseg
                 neplist.Add(new Nepesseg(sr.ReadLine()));
             }
             sr.Close();
-            Console.WriteLine("3.feladat:");
+            Console.WriteLine("3.feladat");
             int ossz = 0;
             foreach (var item in neplist)
             {
@@ -27,7 +27,7 @@ namespace nepesseg
             }
             Console.WriteLine($"{ossz} db ország adatait tartalmazza a forrás.");
             Console.WriteLine();
-            Console.WriteLine("4.feladat:");
+            Console.WriteLine("4.feladat");
             foreach (var item in neplist)
             {
                 if (item.orszag=="Kína")
@@ -36,7 +36,7 @@ namespace nepesseg
                 }
             }
             Console.WriteLine();
-            Console.WriteLine("5.feladat:");
+            Console.WriteLine("5.feladat");
             int indlak = 0;
             int kinlak = 0;
             foreach(var item in neplist)
@@ -52,7 +52,7 @@ namespace nepesseg
             }
             Console.WriteLine($"Kínában a lakosság {kinlak-indlak} fővel volt több.");
             Console.WriteLine();
-            Console.WriteLine("6.feladat:");
+            Console.WriteLine("6.feladat");
             int harmadik_lak = 0;
             string harmadik_nev = "";
             foreach(var item in neplist)
@@ -64,6 +64,17 @@ namespace nepesseg
                 }
             }
             Console.WriteLine($"A harmadik legnépesebb ország: {harmadik_nev}, lakossága {harmadik_lak} fő.");
+            Console.WriteLine();
+            Console.WriteLine("7.feladat - A következő országok  lakosságának több mint 30%-a a fővárosban él:");
+            bool sz = false;
+            foreach (var item in neplist)
+            {
+                sz = item.szazalek();
+                if (sz == true)
+                {
+                    Console.WriteLine(item.orszag+"\t"+"{"+item.fovaros+"}");
+                }
+            }
             Console.ReadLine();
         }
     }
