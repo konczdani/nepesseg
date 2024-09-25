@@ -20,15 +20,21 @@ namespace nepesseg
             }
             sr.Close();
             Console.WriteLine("3.feladat:");
-            List<string>orszag=new List<string>();
+            int ossz = 0;
             foreach (var item in neplist)
             {
-                if (!orszag.Contains(item.orszag))
+                ossz++;
+            }
+            Console.WriteLine($"{ossz} db ország adatait tartalmazza a forrás.");
+            Console.WriteLine();
+            Console.WriteLine("4.feladat:");
+            foreach (var item in neplist)
+            {
+                if (item.orszag=="Kína")
                 {
-                    orszag.Add(item.orszag);
+                    Console.WriteLine($"Kína népsűrűsége {item.nepesseg/item.terulet} fő/km^2.");
                 }
             }
-            Console.WriteLine($"{orszag.Count} db ország adatait tartalmazza a forrás");
             Console.ReadLine();
         }
     }
